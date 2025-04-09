@@ -1,0 +1,115 @@
+@font-face {
+    font-family: 'DM Sans';
+    src: url("./assets/DMSans-VariableFont_opsz,wght.ttf");
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family:  'DM Sans', sans-serif;
+    color: #1E0E62;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    width: 1170px;
+    margin: 42px auto;
+}
+
+.title {
+    font-size: 42px;
+}
+
+.main {
+    background: #fff;
+    width: 1170px;
+    margin: 0 auto 42px;
+}
+
+.button {
+    display: inline-block;
+    border-radius: 100px;
+    background: #FFF;
+    color: #1E0E62;
+    border: none;
+}
+
+.button_big-size {
+    height: 50px;
+    padding: 12px 30px;
+    font-size: 18px;
+    line-height: 26px;
+}
+
+.button_middle-size {
+    height: 40px;
+    padding: 9px 25px;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.button_outlined {
+    background: transparent;
+    border: 2px solid #EBEAED;
+}
+
+.button_accent {
+    background: #25DAC5;
+    color: #FFF;
+}
+
+.card-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 30px;
+}
+
+.card {
+    display: block;
+    position: relative;
+    border-radius: 10px;
+    border: none;
+    padding: 50px 70px;
+    width: 570px;
+    height: 340px;
+    box-sizing: border-box;
+    background: #EBEAED;
+}
+
+.card_outlined {
+    border: 2px solid #EBEAED;
+    background: transparent;
+}
+
+.card_outlined p {
+    color: rgba(21, 20, 57, .4);
+}
+
+.card_highlighted {
+    background: #482BE7;
+    color: #FFF;
+}
+
+.card_background-image {
+    color: #FFF;
+    background-size: cover;
+}
+
+.card > .button {
+    position: absolute;
+    bottom: 50px;
+    left: 70px;
+}
+
+.card > h2 {
+    margin: 0 0 16px 0;
+}
+
+.card > p {
+
+}
