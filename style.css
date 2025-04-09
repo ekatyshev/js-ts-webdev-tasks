@@ -106,10 +106,13 @@ body {
     left: 70px;
 }
 
-.card > h2 {
+.card h2 {
     margin: 0 0 16px 0;
+    font-size: 22px;
+    line-height: 32px;
 }
 
-.card > p {
-
+.card p {
+    font-size: 16px;
+    line-height: 26px;
 }
