@@ -32,6 +32,7 @@
 
     &:hover {
         color: rgba(21, 20, 57, 0.7);
+        cursor: pointer;
     }
 }
 
