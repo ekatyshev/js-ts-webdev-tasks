@@ -48,4 +48,10 @@ table {
   border-spacing: 0;
 }
 
+html {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+}
+
 /*# sourceMappingURL=style.css.map */
