@@ -3,8 +3,8 @@ import {ProductsPage} from "./pages/ProductsPage.ts"
 import {ProductDetailPage} from "./pages/ProductDetailPage.ts"
 import {CategoriesPage} from "./pages/CategoriesPage.ts"
 import {NavPanel} from "./components/NavPanel.ts";
-import {Footer} from "./components/Footer.ts";
-import {Header} from "./components/Header.ts";
+import {Footer} from "./components/footer/Footer.ts";
+import {Header} from "./components/header/Header.ts";
 
 const router = new Navigo('/');
 
