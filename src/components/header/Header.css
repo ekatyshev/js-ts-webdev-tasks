@@ -1,9 +1,3 @@
-* {
-  font-family: "Rubik", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: normal;
-}
-
 .offer {
   background: black;
   color: white;
@@ -23,7 +17,10 @@
 }
 
 .cover__slogan {
-  font: bold 64px/64px "Poppins", sans-serif;
+  font-weight: bold;
+  font-size: 64px;
+  line-height: 64px;
+  font-family: "Poppins", sans-serif;
   color: black;
 }
 
@@ -56,7 +53,9 @@
 }
 
 .numbers > li > p {
-  font: 16px/22px rgba(0, 0, 0, 0.6);
+  font-size: 16px;
+  line-height: 22px;
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .numbers li + li {
