@@ -1,3 +1,9 @@
+* {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+}
+
 .offer {
   background: black;
   color: white;
@@ -44,7 +50,9 @@
 }
 
 .numbers > li > div {
-  font: 40px bold black;
+  font-size: 40px;
+  font-weight: bold;
+  color: black;
 }
 
 .numbers > li > p {
