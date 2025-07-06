@@ -1,3 +1,5 @@
+import './Footer.sass';
+
 export function Footer(): HTMLElement {
     const footer = document.createElement('footer')
 

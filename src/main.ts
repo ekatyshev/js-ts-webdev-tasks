@@ -1,3 +1,4 @@
+import './style.sass'
 import router from "./router.ts"
 
 document.addEventListener('DOMContentLoaded', () => {
