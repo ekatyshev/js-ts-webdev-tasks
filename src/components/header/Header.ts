@@ -7,7 +7,7 @@ export function Header(): HTMLElement {
 <div class="offer">Sign up and get 20% off to your first order. <a href="#">Sign Up Now</a></div>
 
 <div class="top-menu">
-    <div class="logo"></div>
+    <div class="logo">SHOP.CO</div>
     <div class="user">
         <a href="#" class="user-item user-item_cart"></a>
         <a href="#" class="user-item user-item_account"></a>
