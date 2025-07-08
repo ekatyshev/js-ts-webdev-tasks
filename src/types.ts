@@ -1,3 +1,8 @@
+export interface ICategory {
+    slug: string;
+    name: string;
+}
+
 export interface IProduct {
     id: number;
     title: string;

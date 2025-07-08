@@ -1,5 +1,13 @@
 import { type IProduct } from '../types'
 
+export function getCategories(){
+    const url = 'https://dummyjson.com/products/categories';
+
+    return new Promise((resolve) => {
+        fetch(url).then(response => response.json()).then(data => resolve(data));
+    })
+}
+
 export function getProducts(){
     const url = 'https://dummyjson.com/products';
 
