@@ -12,7 +12,7 @@ export function Footer(): HTMLElement {
     </form>
 </div>
 
-<div class="footer__main-content">
+<nav class="footer-navigation">
     <div class="footer__about">
         <h5>Shop.co</h5>
         <div class="slogan">We have clothes that suits your style and which you’re proud to wear. From women to men.</div>
@@ -23,38 +23,35 @@ export function Footer(): HTMLElement {
             <li class="social-link social-link_github"></li>
         </ul>
     </div>
-
-    <nav class="footer-navigation">
-        <ul>
-            <h5>Company</h5>
-            <li>About</li>
-            <li>Features</li>
-            <li>Works</li>
-            <li>Career</li>
-        </ul>
-        <ul>
-            <h5>Help</h5>
-            <li>Customer Support</li>
-            <li>Delivery Details</li>
-            <li>Terms & Conditions</li>
-            <li>Privacy Policy</li>
-        </ul>
-        <ul>
-            <h5>FAQ</h5>
-            <li>Account</li>
-            <li>Manage Deliveries</li>
-            <li>Orders</li>
-            <li>Payments</li>
-        </ul>
-        <ul>
-            <h5>Resources</h5>
-            <li>Free eBooks</li>
-            <li>Development Tutorial</li>
-            <li>How to - Blog</li>
-            <li>Youtube Playlist</li>
-        </ul>
-    </nav>
-</div>
+    <ul>
+        <h5>Company</h5>
+        <li>About</li>
+        <li>Features</li>
+        <li>Works</li>
+        <li>Career</li>
+    </ul>
+    <ul>
+        <h5>Help</h5>
+        <li>Customer Support</li>
+        <li>Delivery Details</li>
+        <li>Terms & Conditions</li>
+        <li>Privacy Policy</li>
+    </ul>
+    <ul>
+        <h5>FAQ</h5>
+        <li>Account</li>
+        <li>Manage Deliveries</li>
+        <li>Orders</li>
+        <li>Payments</li>
+    </ul>
+    <ul>
+        <h5>Resources</h5>
+        <li>Free eBooks</li>
+        <li>Development Tutorial</li>
+        <li>How to - Blog</li>
+        <li>Youtube Playlist</li>
+    </ul>
+</nav>
 
 <div class="bottom-line">
     <div class="copyright">Shop.co © 2000-2023, All Rights Reserved</div>
