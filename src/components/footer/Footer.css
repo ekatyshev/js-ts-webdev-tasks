@@ -2,4 +2,37 @@ footer {
   background-color: #f0f0f0;
 }
 
+.subscription {
+  background-color: black;
+  border-radius: 20px;
+}
+
+.subscription .email {
+  border-radius: 100px;
+}
+
+.subscription button {
+  border-radius: 100px;
+}
+
+payment-option_visa {
+  background-image: url("../../assets/img/logo-visa.svg");
+}
+
+.payment-option_mastercard {
+  background-image: url("../../assets/img/logo-mastercard.svg");
+}
+
+.payment-option_paypal {
+  background-image: url("../../assets/img/logo-paypal.svg");
+}
+
+.payment-option_apple {
+  background-image: url("../../assets/img/logo-apple-pay.svg");
+}
+
+.payment-option_google {
+  background-image: url("../../assets/img/logo-google-pay.svg");
+}
+
 /*# sourceMappingURL=Footer.css.map */

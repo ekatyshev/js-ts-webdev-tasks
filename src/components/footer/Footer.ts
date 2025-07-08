@@ -7,13 +7,13 @@ export function Footer(): HTMLElement {
 <div class="subscription">
     <form>
         <h4>STAY UPTO DATE ABOUT OUR LATEST OFFERS</h4>
-        <input type="email" placeholder="Enter your email address">
+        <input class="email" type="email" placeholder="Enter your email address">
         <button>Subscribe to Newsletter</button>    
     </form>
 </div>
 
 <div class="footer__main-content">
-    <div class="footer_about">
+    <div class="footer__about">
         <h5>Shop.co</h5>
         <div class="slogan">We have clothes that suits your style and which you’re proud to wear. From women to men.</div>
         <ul class="social-links">
