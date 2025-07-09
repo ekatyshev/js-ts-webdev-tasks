@@ -8,7 +8,6 @@ export function CategoriesPage() {
     main.classList.add('main');
 
     getCategories().then((categories: any) => {
-        console.log(categories);
         categories.forEach((category: ICategory) => {
             const categoryElement = Category(category);
             main.append(categoryElement);

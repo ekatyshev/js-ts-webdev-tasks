@@ -21,8 +21,9 @@ export function Product(product: IProduct) {
     const detailsButton = document.createElement('button');
     detailsButton.innerText = 'See Details'
     detailsButton.addEventListener('click', () => {
-        router.navigate(`/products/${product.id}`)
+        router.navigate(`/product/${product.id}`)
     })
+
     if (template.content.firstElementChild) {
         template.content.firstElementChild.append(detailsButton)
     }

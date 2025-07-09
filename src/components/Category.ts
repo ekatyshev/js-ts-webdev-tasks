@@ -3,16 +3,21 @@ import router from "../router.ts";
 
 export function Category(category: ICategory) {
 
-
     const template = document.createElement('template');
 
-    const categoryCard = document.createElement('a');
+    template.innerHTML = `<div class="category-card"></div>>`
 
-    categoryCard.innerHTML = `${category.name}`
+    const categoryCardLink = document.createElement('a');
+    categoryCardLink.setAttribute('href', `/category/${category.slug}`);
+    categoryCardLink.innerText = category.name;
 
-    categoryCard.addEventListener('click', () => {
-        router.navigate(`/products/${category.slug}`)
+    categoryCardLink.addEventListener('click', () => {
+        router.navigate(`/category/${category.slug}`)
     })
+
+    if (template.content.firstElementChild) {
+        template.content.firstElementChild.appendChild(categoryCardLink);
+    }
 
     return template.content.firstElementChild as HTMLElement;
 }

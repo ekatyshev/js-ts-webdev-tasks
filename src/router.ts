@@ -1,5 +1,5 @@
 import Navigo from "navigo"
-import {ProductsPage} from "./pages/ProductsPage.ts"
+import {Category} from "./pages/Category.ts"
 import {ProductDetailPage} from "./pages/ProductDetailPage.ts"
 import {CategoriesPage} from "./pages/CategoriesPage.ts"
 import {NavPanel} from "./components/NavPanel.ts";
@@ -26,10 +26,10 @@ router.on({
     "/": () => {
         return handleRouteChange(CategoriesPage, '/')
     },
-    "/products": () => {
-        return handleRouteChange(ProductsPage, '/products')
+    "/category/:postId": (params: { data: { postId: string } }) => {
+        return handleRouteChange(Category, '/products', params)
     },
-    "/products/:postId": (params: { data: { postId: string } }) => {
+    "/product/:postId": (params: { data: { postId: string } }) => {
         return handleRouteChange(ProductDetailPage, '/products/:postId', params)
     },
 });
