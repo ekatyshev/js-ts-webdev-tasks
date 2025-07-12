@@ -3,12 +3,12 @@ import { ProductCard } from "../components/productCard/ProductCard.ts";
 import { Filters } from "../components/filters/Filters.ts";
 import {type IProduct } from "../types.ts";
 
-export function Category(params: { categorySlug: string }) {
+export function Category(param: string) {
 
     const main = document.createElement('main');
     main.classList.add('main');
 
-    const slug = params.categorySlug
+    const slug = param
 
     main.innerHTML = `
 <article>

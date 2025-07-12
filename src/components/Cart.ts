@@ -1,5 +1,4 @@
-import {type CartItem, type Cart, type IProduct} from "../types.ts";
-import {getProductById} from "../api/productsApi.ts";
+import { type CartItem } from "../types.ts";
 
 export class Cart {
     private items: CartItem[];
@@ -17,21 +16,27 @@ export class Cart {
     }
 
     addToCart(id: number, quantity: number): void {
-        const cartItem: CartItem = {
+        const cartItem = {
             id: id,
             quantity: quantity,
         }
 
-        const product = getProductById(id).then((product: IProduct) => {
-            this.subtotal += product.price;
-            this.discount += product.discount;
-        })
-
         this.items.push(cartItem);
+        recalculateCart();
+    }
 
-        const item = getProductById(product.id)
+    getCart(): void {
+        return {
+            items: this.items,
+            subtotal: this.subtotal,
+            discount: this.discount,
+            discountPercentage: this.discountPercentage,
+            total: this.total,
+        }
+    }
 
-        this.subtotal
+    recalculateCart() {
+
     }
 }
 

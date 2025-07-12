@@ -24,11 +24,3 @@ export interface CartItem {
     id: number;
     quantity: number;
 }
-
-export interface Cart {
-    products: CartItem[];
-    subtotal: number;
-    discount: number;
-    discountPercentage: number;
-    total: number;
-}

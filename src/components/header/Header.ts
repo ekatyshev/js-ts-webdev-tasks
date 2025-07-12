@@ -11,7 +11,7 @@ export function Header(): HTMLElement {
     <div class="logo" id="logo">SHOP.CO</div>
     <div class="user">
         <a href="#" class="user-item user-item_cart"></a>
-        <a href="#" class="user-item user-item_account"></a>
+        <span class="user-item user-item_account"></span>
     </div>
 </div>
 

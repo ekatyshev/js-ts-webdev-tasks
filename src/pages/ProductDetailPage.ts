@@ -1,12 +1,12 @@
 import { getProductById } from "../api/productsApi.ts";
 import {type IProduct } from "../types.ts";
 
-export function ProductDetailPage(params: { productId: string }) {
+export function ProductDetailPage(param: string) {
 
     const main = document.createElement('main');
     main.classList.add('main');
 
-    const id = params.productId
+    const id = param
 
     getProductById(id).then((product: IProduct) => {
         const template = document.createElement('template');
