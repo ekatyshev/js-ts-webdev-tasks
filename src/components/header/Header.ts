@@ -1,4 +1,5 @@
 import './Header.sass';
+import router from "../../router.ts";
 
 export function Header(): HTMLElement {
     const header = document.createElement('header')
@@ -7,7 +8,7 @@ export function Header(): HTMLElement {
 <div class="offer">Sign up and get 20% off to your first order. <a href="#">Sign Up Now</a></div>
 
 <div class="top-menu">
-    <div class="logo">SHOP.CO</div>
+    <div class="logo" id="logo">SHOP.CO</div>
     <div class="user">
         <a href="#" class="user-item user-item_cart"></a>
         <a href="#" class="user-item user-item_account"></a>
@@ -42,6 +43,12 @@ export function Header(): HTMLElement {
     <li class="brand-band__item brand-band__item_calvin-klein"></li>
 </ul>
 `
+
+    const logo = header.querySelector('#logo');
+
+    logo?.addEventListener('click', () => {
+        router.navigate('/')
+    })
 
     return header
 }

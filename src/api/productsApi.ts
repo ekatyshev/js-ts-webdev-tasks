@@ -16,6 +16,14 @@ export function getProducts(){
     })
 }
 
+export function getProductsByCategory(category: string){
+    const url = 'https://dummyjson.com/products/category/' +  category;
+
+    return new Promise((resolve) => {
+        fetch(url).then(response => response.json()).then(data => resolve(data));
+    })
+}
+
 export function getProductById(id: string){
     const url = `https://dummyjson.com/products/${id}`;
 

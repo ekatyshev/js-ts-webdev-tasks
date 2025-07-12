@@ -42,7 +42,7 @@ Alternativly all screens could be found in `frontend/design` folder
 ### Pages
 
 - Homepage
-- Category Page
+- CategoryCard Page
 - Product Detail Page
 - Cart
 - Checkout
@@ -55,9 +55,9 @@ Alternativly all screens could be found in `frontend/design` folder
 - Categories sections display all available categories
   - Backend call `GET /products/categories` https://dummyjson.com/docs/products#products-categories
   - Each category is displayed in rectangle with a title inside (words should be breaking as it is shown on the design)
-- Click on any category opens "Category page" for the selected category: `/category/:categoryName`
+- Click on any category opens "CategoryCard page" for the selected category: `/category/:categoryName`
 
-#### Category Page
+#### CategoryCard Page
 
 - URL: `category/:categoryName` where `categoryName` is the dynamic name of the selected category i.e. `category/skincare`, `category/laptops`
 - All products related to the selected category should be displayed
@@ -70,7 +70,7 @@ Alternativly all screens could be found in `frontend/design` folder
   - Price filter minimum value is 10$, maximum value is 2000$
   - Apply filter button should filter products on the right side and show only those which are satisfied filter params (brand and price)
   - Reset filter button should reload products in the selected category from Backend
-  - On Mobile screen filters panel could be opened by clicking filter icons on the right side of the Category Name title
+  - On Mobile screen filters panel could be opened by clicking filter icons on the right side of the CategoryCard Name title
   - On Mobile screen filters panel could be closed by clicking on the cross icon on the right side on overflow or by clicking buttons Apply filter or Reset Filter
 
 ### Product Detail Page
@@ -139,7 +139,7 @@ Use https://dummyjson.com/docs or create your own with https://strapi.io/
 ### Render of pages (HTML, CSS, TS) - maximum 7 points
 
 - Homepage <b>1 points</b>
-- Category Page <b>1 points</b>
+- CategoryCard Page <b>1 points</b>
 - Product Detail Page <b>1 points</b>
 - Cart <b>1 points</b>
 - Checkout <b>1 points</b>
