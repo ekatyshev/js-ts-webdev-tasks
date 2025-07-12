@@ -3,7 +3,6 @@ import { type Match } from "navigo"
 import {Category} from "./pages/Category.ts"
 import {ProductDetailPage} from "./pages/ProductDetailPage.ts"
 import {CategoriesPage} from "./pages/CategoriesPage.ts"
-import {NavPanel} from "./components/NavPanel.ts";
 import {Footer} from "./components/footer/Footer.ts";
 import {Header} from "./components/header/Header.ts";
 

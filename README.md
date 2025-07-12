@@ -43,7 +43,7 @@ Alternativly all screens could be found in `frontend/design` folder
 
 - Homepage
 - CategoryCard Page
-- Product Detail Page
+- ProductCard Detail Page
 - Cart
 - Checkout
 - Order confirmation
@@ -62,7 +62,7 @@ Alternativly all screens could be found in `frontend/design` folder
 - URL: `category/:categoryName` where `categoryName` is the dynamic name of the selected category i.e. `category/skincare`, `category/laptops`
 - All products related to the selected category should be displayed
   - Backend call to get products in the category `GET /products/category/:categoryName` https://dummyjson.com/docs/products#products-category
-- Click on any product opens "Product Detail Page" for the selected product: `/product/:productId`
+- Click on any product opens "ProductCard Detail Page" for the selected product: `/product/:productId`
 - Filters panel
   - Brand filters should contain all brands from the products inside category
   - Each brand is selectable
@@ -73,7 +73,7 @@ Alternativly all screens could be found in `frontend/design` folder
   - On Mobile screen filters panel could be opened by clicking filter icons on the right side of the CategoryCard Name title
   - On Mobile screen filters panel could be closed by clicking on the cross icon on the right side on overflow or by clicking buttons Apply filter or Reset Filter
 
-### Product Detail Page
+### ProductCard Detail Page
 
 - URL: `/product/:productId` where `productId` is the dynamic id of the product i.e. `product/17`, `product/5`
 - Image gallery displays the first image as the main image and the rest three as the alternatives
@@ -140,7 +140,7 @@ Use https://dummyjson.com/docs or create your own with https://strapi.io/
 
 - Homepage <b>1 points</b>
 - CategoryCard Page <b>1 points</b>
-- Product Detail Page <b>1 points</b>
+- ProductCard Detail Page <b>1 points</b>
 - Cart <b>1 points</b>
 - Checkout <b>1 points</b>
 - Order confirmation <b>1 points</b>

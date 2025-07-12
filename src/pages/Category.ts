@@ -1,5 +1,6 @@
 import { getProductsByCategory } from "../api/productsApi.ts";
-import {Product } from "../components/Product.ts";
+import { ProductCard } from "../components/productCard/ProductCard.ts";
+import { Filters } from "../components/filters/Filters.ts";
 import {type IProduct } from "../types.ts";
 
 export function Category(params: { categorySlug: string }) {
@@ -9,11 +10,27 @@ export function Category(params: { categorySlug: string }) {
 
     const slug = params.categorySlug
 
+    main.innerHTML = `
+<article>
+    <aside></aside>
+    <h1>Category Name</h1>
+</article>
+`
+
+    const brands: string[] = []
+
     getProductsByCategory(slug).then(({products}: any) => {
         products.forEach((product: IProduct) => {
-            const productElement = Product(product);
-            main.append(productElement);
+            const productElement = ProductCard(product)
+            if (!brands.includes(product.brand)) {
+                brands.push(product.brand);
+            }
+            main.append(productElement)
         })
+
+        const aside = main.querySelector('aside')
+        aside?.append(Filters(brands))
     })
+
     return main
 }

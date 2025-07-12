@@ -1,5 +1,4 @@
 import { getProductById } from "../api/productsApi.ts";
-import { Product } from "../components/Product.ts";
 import {type IProduct } from "../types.ts";
 
 export function ProductDetailPage(params: { productId: string }) {
@@ -9,9 +8,55 @@ export function ProductDetailPage(params: { productId: string }) {
 
     const id = params.productId
 
-    getProductById(id).then((value: IProduct) => {
-        const productElement = Product(value)
-        main.append(productElement)
+    getProductById(id).then((product: IProduct) => {
+        const template = document.createElement('template');
+        template.innerHTML = `
+    <div>
+        <div class="thumbnail-container">
+            <img src="${product.thumbnail}" alt="Image of ${product.title}">
+        </div>
+        <h4 class="title">${product.title}</h4>
+        <div class="rating">
+            <span class="rating__stars"></span>
+            <span class="rating__value">${product.rating}<span class="rating__max-rating">/5</span></span>
+        </div>
+        <div class="price">
+            <h5 class="actual-price">$${product.price}</h5>
+        </div>
+    </div>
+    `
+
+        if (template.content.firstElementChild) {
+            if (product.discountPercentage) {
+                const price = template.content.firstElementChild.querySelector('.price');
+
+                if (price) {
+                    const discountPercentage = Math.floor(product.discountPercentage)
+                    const oldPrice = Number( (product.price * ( 1 + ( discountPercentage / 100 ) ) ).toFixed(2) )
+                    const discount = document.createElement('template')
+                    discount.innerHTML = `
+<div class="discount">
+    <div class="old-price">$${oldPrice}</div>
+    <div class="discount-percentage">${discountPercentage}</div>
+</div>
+`
+                    price.appendChild(discount.content.firstElementChild)
+                }
+            }
+        }
+
+        const addToCartButton = document.createElement('button');
+        addToCartButton.innerText = 'Add to Cart'
+        addToCartButton.addEventListener('click', () => {
+            addToCartButton();
+        })
+
+        if (template.content.firstElementChild) {
+            template.content.firstElementChild.append(detailsButton)
+        }
+
+        main.append(template.content.firstElementChild)
     })
+
     return main
 }
