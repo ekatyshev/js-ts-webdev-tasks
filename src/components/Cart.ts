@@ -1,4 +1,4 @@
-import { type CartItem } from "../types.ts";
+import {type CartItem} from "../types.ts";
 
 export class Cart {
     private items: CartItem[];

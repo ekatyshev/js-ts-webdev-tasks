@@ -26,7 +26,7 @@ export function ProductCard(product: IProduct) {
 
             if (price) {
                 const discountPercentage = Math.floor(product.discountPercentage)
-                const oldPrice = Number( (product.price * ( 1 + ( discountPercentage / 100 ) ) ).toFixed(2) )
+                const oldPrice = Number((product.price * (1 + (discountPercentage / 100))).toFixed(2))
                 const discount = document.createElement('template')
                 discount.innerHTML = `
 <div class="discount">

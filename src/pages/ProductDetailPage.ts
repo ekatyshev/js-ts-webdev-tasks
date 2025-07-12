@@ -1,5 +1,5 @@
-import { getProductById } from "../api/productsApi.ts";
-import {type IProduct } from "../types.ts";
+import {getProductById} from "../api/productsApi.ts";
+import {type IProduct} from "../types.ts";
 
 export function ProductDetailPage(param: string) {
 
@@ -32,7 +32,7 @@ export function ProductDetailPage(param: string) {
 
                 if (price) {
                     const discountPercentage = Math.floor(product.discountPercentage)
-                    const oldPrice = Number( (product.price * ( 1 + ( discountPercentage / 100 ) ) ).toFixed(2) )
+                    const oldPrice = Number((product.price * (1 + (discountPercentage / 100))).toFixed(2))
                     const discount = document.createElement('template')
                     discount.innerHTML = `
 <div class="discount">
