@@ -1,9 +1,9 @@
-import './Filters.sass';
+import "./Filters.sass";
 
 export function Filters(existingBrands?: string[]): HTMLElement {
-    const filters = document.createElement('div')
+  const filters = document.createElement("div");
 
-    filters.innerHTML = `
+  filters.innerHTML = `
 <div class="filters-panel">
     <h4>Filters</h4>
     <div class="filter-group filter-group_sort">
@@ -35,20 +35,20 @@ export function Filters(existingBrands?: string[]): HTMLElement {
     </div>
 </div>
 
-`
+`;
 
-    const brandList = filters.querySelector('.filter-group_brand ul');
+  const brandList = filters.querySelector(".filter-group_brand ul");
 
-    if (existingBrands && brandList) {
-        existingBrands.forEach(brand => {
-            const brandItem = document.createElement("li")
-            brandItem.innerHTML = `
+  if (existingBrands && brandList) {
+    existingBrands.forEach((brand) => {
+      const brandItem = document.createElement("li");
+      brandItem.innerHTML = `
             <input type="checkbox" value="${brand}" name="brand">
             <label>${brand}</label>
-            `
-            brandList.append(brandItem)
-        })
-    }
+            `;
+      brandList.append(brandItem);
+    });
+  }
 
-    return filters
+  return filters;
 }

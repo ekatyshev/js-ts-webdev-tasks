@@ -1,101 +1,101 @@
 .offer {
-  background: black;
-  color: white;
-  display: flex;
-  justify-content: center;
-  height: 38px;
+    background: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    height: 38px;
 }
 
 .top-menu {
-  background: white;
-  color: black;
+    background: white;
+    color: black;
 }
 
 .cover {
-  background: #f2f0f1 url(../../assets/img/cover.jpg) no-repeat center center;
-  height: 663px;
+    background: #f2f0f1 url(../../assets/img/cover.jpg) no-repeat center center;
+    height: 663px;
 }
 
 .cover__slogan {
-  font-weight: bold;
-  font-size: 64px;
-  line-height: 64px;
-  font-family: "Poppins", sans-serif;
-  color: black;
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 64px;
+    font-family: "Poppins", sans-serif;
+    color: black;
 }
 
 .cover__description {
-  font: 16px/22px rgba(0, 0, 0, 0.6);
+    font: 16px/22px rgba(0, 0, 0, 0.6);
 }
 
 .show-now {
-  border-radius: 50px;
-  background: black;
-  color: white;
-  padding: 8px 36px;
-  box-sizing: border-box;
-  display: inline-block;
+    border-radius: 50px;
+    background: black;
+    color: white;
+    padding: 8px 36px;
+    box-sizing: border-box;
+    display: inline-block;
 }
 
 .numbers {
-  display: block;
+    display: block;
 }
 
 .numbers > li {
-  display: inline-block;
-  padding-right: 32px;
+    display: inline-block;
+    padding-right: 32px;
 }
 
 .numbers > li > div {
-  font-size: 40px;
-  font-weight: bold;
-  color: black;
+    font-size: 40px;
+    font-weight: bold;
+    color: black;
 }
 
 .numbers > li > p {
-  font-size: 16px;
-  line-height: 22px;
-  color: rgba(0, 0, 0, 0.6);
+    font-size: 16px;
+    line-height: 22px;
+    color: rgba(0, 0, 0, 0.6);
 }
 
 .numbers li + li {
-  padding-left: 32px;
-  border-left: 1px solid rgba(0, 0, 0, 0.1);
+    padding-left: 32px;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .brand-band {
-  background: black;
-  height: 122px;
-  display: flex;
-  justify-content: center;
+    background: black;
+    height: 122px;
+    display: flex;
+    justify-content: center;
 }
 
 .brand-band__item {
-  display: block;
-  min-width: 100px;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: contain;
+    display: block;
+    min-width: 100px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .brand-band__item_versace {
-  background-image: url(../../assets/img/versace.svg);
+    background-image: url(../../assets/img/versace.svg);
 }
 
 .brand-band__item_zara {
-  background-image: url(../../assets/img/zara.svg);
+    background-image: url(../../assets/img/zara.svg);
 }
 
 .brand-band__item_gucci {
-  background-image: url(../../assets/img/gucci.svg);
+    background-image: url(../../assets/img/gucci.svg);
 }
 
 .brand-band__item_prada {
-  background-image: url(../../assets/img/prada.svg);
+    background-image: url(../../assets/img/prada.svg);
 }
 
 .brand-band__item_calvin-klein {
-  background-image: url(../../assets/img/calvin-klein.svg);
+    background-image: url(../../assets/img/calvin-klein.svg);
 }
 
 /*# sourceMappingURL=Header.css.map */

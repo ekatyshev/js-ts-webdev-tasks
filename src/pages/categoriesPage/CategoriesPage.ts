@@ -1,14 +1,13 @@
-import {getCategories} from "../../api/productsApi.ts";
-import type {ICategory} from "../../types.ts";
-import {CategoryCard} from "../../components/categoryCard/CategoryCard.ts";
-import './CategoriesPage.sass'
+import { getCategories } from "../../api/productsApi.ts";
+import type { ICategory } from "../../types.ts";
+import { CategoryCard } from "../../components/categoryCard/CategoryCard.ts";
+import "./CategoriesPage.sass";
 
 export function CategoriesPage() {
+  const main = document.createElement("main");
+  main.classList.add("main");
 
-    const main = document.createElement('main');
-    main.classList.add('main');
-
-    main.innerHTML = `
+  main.innerHTML = `
 
 
 <div class="cover__wrapper">
@@ -42,23 +41,23 @@ export function CategoriesPage() {
       <li class="brand-band__item brand-band__item_calvin-klein"></li>
   </ul>
 </div>
-`
+`;
 
-    const categoryListWrapper = document.createElement('article');
-    categoryListWrapper.classList.add('categories__wrapper');
-    categoryListWrapper.innerHTML = `<h2 class="content-max-width">Categories</h2>`
-    const categoryList = document.createElement('div');
-    categoryList.classList.add('categories', 'content-max-width');
+  const categoryListWrapper = document.createElement("article");
+  categoryListWrapper.classList.add("categories__wrapper");
+  categoryListWrapper.innerHTML = `<h2 class="content-max-width">Categories</h2>`;
+  const categoryList = document.createElement("div");
+  categoryList.classList.add("categories", "content-max-width");
 
-    getCategories().then((categories: any) => {
-        categories.forEach((category: ICategory) => {
-            const categoryElement = CategoryCard(category);
-          categoryList.append(categoryElement);
-        })
-    })
+  getCategories().then((categories: any) => {
+    categories.forEach((category: ICategory) => {
+      const categoryElement = CategoryCard(category);
+      categoryList.append(categoryElement);
+    });
+  });
 
-    categoryListWrapper.appendChild(categoryList);
-    main.appendChild(categoryListWrapper);
+  categoryListWrapper.appendChild(categoryList);
+  main.appendChild(categoryListWrapper);
 
-    return main
+  return main;
 }

@@ -1,6 +1,6 @@
-import './style.sass'
-import router from "./router.ts"
+import "./style.sass";
+import router from "./router.ts";
 
-document.addEventListener('DOMContentLoaded', () => {
-    router.resolve()
-})
+document.addEventListener("DOMContentLoaded", () => {
+  router.resolve();
+});

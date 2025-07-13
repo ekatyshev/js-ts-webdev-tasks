@@ -1,10 +1,10 @@
-import './Header.sass';
+import "./Header.sass";
 import router from "../../router.ts";
 
 export function Header(): HTMLElement {
-    const header = document.createElement('header')
+  const header = document.createElement("header");
 
-    header.innerHTML = `
+  header.innerHTML = `
 <div class="offer__wrapper">
     <div class="offer content-max-width">Sign up and get 20% off to your first order. <a class="offer__link" href="#">Sign Up Now</a></div>
 </div>
@@ -18,18 +18,18 @@ export function Header(): HTMLElement {
         </div>
     </div>
 </div>
-`
+`;
 
-    const logo = header.querySelector('#logo');
-    const linkToCart = header.querySelector('.user-item_cart');
+  const logo = header.querySelector("#logo");
+  const linkToCart = header.querySelector(".user-item_cart");
 
-    logo?.addEventListener('click', () => {
-        router.navigate('/')
-    })
+  logo?.addEventListener("click", () => {
+    router.navigate("/");
+  });
 
-    linkToCart?.addEventListener('click', () => {
-        router.navigate('/cart')
-    })
+  linkToCart?.addEventListener("click", () => {
+    router.navigate("/cart");
+  });
 
-    return header
+  return header;
 }

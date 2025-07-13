@@ -3,9 +3,9 @@ import router from "../../router.ts";
 import "./CategoryCard.sass";
 
 export function CategoryCard(category: ICategory) {
-  const template = document.createElement('template');
-  const categoryCard = document.createElement('div');
-  categoryCard.classList.add('category-card');
+  const template = document.createElement("template");
+  const categoryCard = document.createElement("div");
+  categoryCard.classList.add("category-card");
   categoryCard.innerHTML = `<div class="category-card__title">${category.name}</div>`;
 
   categoryCard.addEventListener("click", () => {

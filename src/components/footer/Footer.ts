@@ -1,10 +1,10 @@
-import './Footer.sass';
+import "./Footer.sass";
 
 export function Footer(): HTMLElement {
-  const footer = document.createElement('footer')
-  footer.classList.add('footer__wrapper')
+  const footer = document.createElement("footer");
+  footer.classList.add("footer__wrapper");
 
-    footer.innerHTML = `
+  footer.innerHTML = `
 <div class="footer content-max-width">
     <form class="subscription">
         <h4>STAY UPTO DATE ABOUT OUR LATEST OFFERS</h4>
@@ -69,7 +69,7 @@ export function Footer(): HTMLElement {
   </div>
 </div>
 
-`
+`;
 
-    return footer
+  return footer;
 }
