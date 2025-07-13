@@ -53,7 +53,11 @@ export function ProductDetailPage(param: string, cart: Cart) {
             cart.addToCart(id, piecesToBuy);
         })
 
-        main.append(template.content.firstElementChild)
+        if (template.content.firstElementChild) {
+            template.content.firstElementChild.append(addToCartButton)
+            main.append(template.content.firstElementChild)
+        }
+
     })
 
     return main

@@ -10,7 +10,7 @@ export function Header(): HTMLElement {
 <div class="top-menu">
     <div class="logo" id="logo">SHOP.CO</div>
     <div class="user">
-        <a href="#" class="user-item user-item_cart"></a>
+        <span class="user-item user-item_cart"></span>
         <span class="user-item user-item_account"></span>
     </div>
 </div>
@@ -45,9 +45,14 @@ export function Header(): HTMLElement {
 `
 
     const logo = header.querySelector('#logo');
+    const linkToCart = header.querySelector('.user-item_cart');
 
     logo?.addEventListener('click', () => {
         router.navigate('/')
+    })
+
+    linkToCart?.addEventListener('click', () => {
+        router.navigate('/cart')
     })
 
     return header
