@@ -1,73 +1,139 @@
-footer
+.footer__wrapper
   background-color: #f0f0f0
+  margin: 90px 0 0 0
+
+.footer
+  margin: 0 auto
 
 .subscription
+  width: 100%
+  padding: 36px 64px
   background-color: black
+  color: #fff
   border-radius: 20px
+  position: relative
+  top: -90px
+  display: flex
+  justify-content: space-between
+  height: 177px
+  box-sizing: border-box
 
 .subscription h4
   font-size: 40px
   line-height: 45px
   font-weight: bold
+  color: #fff
+  width: 551px
+
+.right-block
+  flex-direction: column
+  width: 350px
+
+.email__wrapper
+  height: 48px
+  position: relative
+  margin-bottom: 14px
+
+.email__wrapper::before
+  content: ""
+  background-image: url("../../assets/img/icon-mail.svg")
+  position: absolute
+  top: 12px
+  left: 16px
+  width: 24px
+  height: 24px
+  display: block
 
 .subscription .email
   border-radius: 100px
+  height: 48px
+  font-size: 16px
+  border: none
+  width: 100%
+  padding: 0 0 0 52px
+  box-sizing: border-box
+
+.subscription .email::placeholder
+  color: rgba(0, 0, 0, .4)
 
 .subscription button
   border-radius: 100px
+  font-size: 16px
+  font-weight: 700
+  height: 43px
+  box-sizing: border-box
+  border: none
+  padding: 0
+  width: 100%
 
 .footer-navigation
   background: #F0F0F0
   display: flex
   justify-content: space-between
+  margin-bottom: 49px
+  margin-top: -36px
 
 .footer__about
+  width: 248px
 
-
-.footer__about h5
+.footer__about h4
   font-family: "Poppins", sans-serif
+  text-transform: uppercase
   font-size: 33px
   font-weight: bold
+  margin-bottom: 25px
 
 .slogan
   font-size: 14px
   line-height: 22px
   color: rgba(0, 0, 0, .6)
+  margin-bottom: 35px
 
 .social-links
-
+  display: flex
+  justify-content: start
+  column-gap: 12px
 
 .social-link
-
+  width: 28px
+  height: 28px
+  background-color: #fff
+  background-size: contain
+  border-radius: 50%
+  border: 1px solid rgba(0, 0, 0, .2)
 
 .social-link_twitter
-
+  background-image: url('../../assets/img/logo-twitter.svg')
 
 .social-link_facebook
-
+  background-image: url('../../assets/img/logo-facebook.svg')
 
 .social-link_instagram
-
+  background-image: url('../../assets/img/logo-instagram.svg')
 
 .social-link_github
-
-.footer-navigation ul
-
+  background-image: url('../../assets/img/logo-github.svg')
 
 .footer-navigation h5
   text-transform: uppercase
   color: #000
+  letter-spacing: 3px
+  margin-bottom: 26px
+  font-weight: 500
 
-.footer-navigation li
+.footer-navigation__list-item
   font-size: 16px
   line-height: 19px
   color: rgba(0, 0, 0, .6)
-  margin-bottom: 6px
+
+.footer-navigation__list-item + .footer-navigation__list-item
+  margin-top: 22px
 
 .bottom-line
-  border-top: 1px solid rgba(0,  0, 0, 0.1)
+  border-top: 1px solid rgba(0, 0, 0, 0.1)
   display: flex
   justify-content: space-between
+  padding: 25px 0 90px
 
 .copyright
   font-size: 14px
@@ -78,8 +144,13 @@ footer
   column-gap: 12px
 
 .payment-option
-  width: 46px
-  height: 30px
+  border-radius: 5.5px
+  width: 46.61px
+  height: 30.03px
+  background-color: #fff
+  background-position: center 0
+  background-repeat: no-repeat
+  box-shadow: 0 5px 9px 0 rgba(183, 183, 183, 0.08)
 
 .payment-option_visa
   background-image: url("../../assets/img/logo-visa.svg")
