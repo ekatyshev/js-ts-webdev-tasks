@@ -11,7 +11,15 @@ export function ProductCard(product: IProduct) {
         </div>
         <h4 class="product-card__title">${product.title}</h4>
         <div class="rating">
-            <span class="rating__stars"></span>
+            <span class="rating__stars" style="width: ${Math.floor(product.rating) * (15.5 + 4.5) + ( 15.5 * ( product.rating % 1 ))}px">
+                <div class="rating__all-stars">
+                    <span class="rating__star"></span>
+                    <span class="rating__star"></span>
+                    <span class="rating__star"></span>
+                    <span class="rating__star"></span>
+                    <span class="rating__star"></span>
+                </div>
+            </span>
             <span class="rating__value">${product.rating}<span class="rating__max-rating">/5</span></span>
         </div>
         <div class="price">

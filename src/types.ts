@@ -14,6 +14,7 @@ export interface IProduct {
   rating: number;
   thumbnail: string;
   images: string[];
+  stock: number;
 }
 
 export interface NavPanelConfigItem {

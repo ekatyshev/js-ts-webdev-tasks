@@ -17,12 +17,30 @@
 
 .rating
   margin-bottom: 10px
+  display: flex
+  justify-content: start
+  column-gap: 11px
+  align-content: center
 
 .rating__stars
+  width: 0
+  overflow: clip
 
+.rating__all-stars
+  width: 95.5px
+  display: flex
+  column-gap: 4.5px
+
+.rating__star
+  width: 15.5px
+  height: 15.5px
+  background-image: url("../../assets/img/icon-star.svg")
+  background-size: contain
 
 .rating__value
   color: #000
+  display: flex
+  align-content: center
 
 .rating__max-rating
   color: rgba(0, 0, 0, .6)

@@ -43,13 +43,29 @@ export function ProductDetailsPage(param: string, cart: Cart) {
             <img src="${product.thumbnail}" alt="Image of ${product.title}">
           </div>
         </div>
-        <h4 class="title">${product.title}</h4>
-        <div class="rating">
-          <span class="rating__stars"></span>
-          <span class="rating__value">${product.rating}<span class="rating__max-rating">/5</span></span>
-        </div>
-        <div class="price">
-          <h5 class="actual-price">$${product.price}</h5>
+        <div class="details">
+            <div class="description__section description__section_main">
+              <h4 class="title">${product.title}</h4>
+              <div class="rating">
+                  <span class="rating__stars" style="width: ${Math.floor(product.rating) * (24 + 7) + (24 * (product.rating % 1))}px">
+                      <div class="rating__all-stars">
+                          <span class="rating__star"></span>
+                          <span class="rating__star"></span>
+                          <span class="rating__star"></span>
+                          <span class="rating__star"></span>
+                          <span class="rating__star"></span>
+                      </div>
+                  </span>
+                  <span class="rating__value">${product.rating}<span class="rating__max-rating">/5</span></span>
+              </div>
+              <div class="price">
+                <h5 class="actual-price">$${product.price}</h5>
+              </div>
+              <div class="description">${product.description}</div>
+          </div>
+          ${product.brand ? '<div class="description__section description__section_brand"><h6>Brand</h6><p>' + product.brand + '</p></div>' : ''}
+          <div class="description__section description__section_stock"><h6>In Stock</h6><p>${product.stock} items</p></div>
+          <div class="adding-to-cart"></div>
         </div>
       </div>
     </div>
@@ -107,12 +123,16 @@ export function ProductDetailsPage(param: string, cart: Cart) {
 
     const addToCartButton = document.createElement("button");
     addToCartButton.innerText = "Add to Cart";
+    addToCartButton.classList.add("adding-to-cart__button");
     addToCartButton.addEventListener("click", () => {
       cart.addToCart(id, piecesToBuy);
     });
 
     if (template.content.firstElementChild) {
-      template.content.firstElementChild.append(addToCartButton);
+      const addingToCart = template.content.firstElementChild.querySelector(".adding-to-cart");
+      if (addingToCart) {
+        addingToCart.appendChild(addToCartButton);
+      }
       main.append(template.content.firstElementChild);
     }
 
