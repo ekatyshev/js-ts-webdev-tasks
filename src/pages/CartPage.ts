@@ -4,9 +4,9 @@ import {getProductById} from "../api/productsApi.ts";
 
 export function CartPage(param: string, cart: Cart) {
 
-    // // TODO Delete. Mock cart
-    // cart = new Cart()
-    // cart.addToCart('24', 20)
+    // TODO Delete. Mock cart
+    cart = new Cart()
+    cart.addToCart('24', 20)
 
     const main = document.createElement('main');
     main.classList.add('main');
