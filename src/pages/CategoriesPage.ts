@@ -1,6 +1,6 @@
 import {getCategories} from "../api/productsApi.ts";
 import type {ICategory} from "../types.ts";
-import {CategoryCard} from "../components/CategoryCard.ts";
+import {CategoryCard} from "../components/categoryCard/CategoryCard.ts";
 
 export function CategoriesPage() {
 

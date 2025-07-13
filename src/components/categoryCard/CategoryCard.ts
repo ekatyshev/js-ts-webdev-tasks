@@ -1,5 +1,6 @@
-import type {ICategory} from "../types.ts";
-import router from "../router.ts";
+import type {ICategory} from "../../types.ts";
+import router from "../../router.ts";
+import './CategoryCard.sass';
 
 export function CategoryCard(category: ICategory) {
 
