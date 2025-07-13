@@ -1,24 +1,22 @@
-import type {ICategory} from "../../types.ts";
+import type { ICategory } from "../../types.ts";
 import router from "../../router.ts";
-import './CategoryCard.sass';
+import "./CategoryCard.sass";
 
 export function CategoryCard(category: ICategory) {
+  const template = document.createElement('template');
+  const categoryCard = document.createElement('div');
+  categoryCard.classList.add('category-card');
+  categoryCard.innerHTML = `<div class="category-card__title">${category.name}</div>`;
 
-    const template = document.createElement('template');
+  categoryCard.addEventListener("click", () => {
+    router.navigate(`/category/${category.slug}`);
+  });
 
-    template.innerHTML = `<div class="category-card"></div>>`
+  if (template.content) {
+    template.content.append(categoryCard);
+  }
 
-    const categoryCardLink = document.createElement('div');
-    //  categoryCardLink.setAttribute('href', `/category/${category.slug}`);
-    categoryCardLink.innerText = category.name;
+  console.log(template);
 
-    categoryCardLink.addEventListener('click', () => {
-        router.navigate(`/category/${category.slug}`)
-    })
-
-    if (template.content.firstElementChild) {
-        template.content.firstElementChild.appendChild(categoryCardLink);
-    }
-
-    return template.content.firstElementChild as HTMLElement;
+  return template.content.firstElementChild as HTMLElement;
 }
