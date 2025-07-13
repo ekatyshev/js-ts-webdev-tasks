@@ -1,4 +1,4 @@
-import {Cart} from '../components/Cart'
+import {Cart} from '../components/Cart.ts'
 import {ProductCard} from "../components/productCard/ProductCard.ts";
 import {getProductById} from "../api/productsApi.ts";
 

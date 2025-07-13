@@ -1,17 +1,31 @@
-.offer
+.offer__wrapper
   background: black
+
+.offer
   color: white
   display: flex
   justify-content: center
+  align-items: center
   height: 38px
+  margin: 0 auto
+
+.offer__link:link,
+.offer__link:hover,
+.offer__link:active,
+.offer__link:visited
+  color: #fff
+  margin-left: 6px
+
+.top-menu__wrapper
+  background: white
 
 .top-menu
-  background: white
   color: black
   height: 96px
   display: flex
   justify-content: space-between
   padding: 34px 0 38px
+  margin: 0 auto
   box-sizing: border-box
 
 .top-menu .logo
@@ -39,9 +53,12 @@
 .user-item_account
   background-image: url("../../assets/img/icon-account.svg")
 
-.cover
+.cover__wrapper
   background: #f2f0f1 url(../../assets/img/cover.jpg) no-repeat center center
   height: 663px
+
+.cover
+  margin: 0 auto
 
 .cover__slogan
   font-weight: bold
@@ -49,17 +66,26 @@
   line-height: 64px
   font-family: "Poppins", sans-serif
   color: black
+  width: 45%
+  padding: 103px 0 0 0
+  margin-bottom: 32px
 
 .cover__description
-  font: 16px/22px rgba(0, 0, 0 ,.6)
+  font: 16px/22px rgba(0, 0, 0, .6)
+  width: 45%
+  margin-bottom: 32px
 
 .show-now
   border-radius: 50px
   background: black
   color: white
-  padding: 8px 36px
+  padding: 16px 66px
+  margin-bottom: 48px
   box-sizing: border-box
   display: inline-block
+  font-size: 16px
+  line-height: 22px
+  text-decoration: none
 
 .numbers
   display: block
@@ -82,11 +108,15 @@
   padding-left: 32px
   border-left: 1px solid rgba(0, 0, 0, .1)
 
-.brand-band
+.brand-band__wrapper
   background: black
+
+.brand-band
   height: 122px
   display: flex
-  justify-content: center
+  justify-content: space-evenly
+  gap: 100px
+  margin: 0 auto
 
 .brand-band__item
   display: block
@@ -97,15 +127,20 @@
 
 .brand-band__item_versace
   background-image: url(../../assets/img/versace.svg)
+  flex-grow: 22
 
 .brand-band__item_zara
   background-image: url(../../assets/img/zara.svg)
+  flex-grow: 12
 
 .brand-band__item_gucci
   background-image: url(../../assets/img/gucci.svg)
+  flex-grow: 21
 
 .brand-band__item_prada
   background-image: url(../../assets/img/prada.svg)
+  flex-grow: 22
 
 .brand-band__item_calvin-klein
   background-image: url(../../assets/img/calvin-klein.svg)
+  flex-grow: 23

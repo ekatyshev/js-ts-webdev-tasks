@@ -2,7 +2,7 @@ import Navigo from "navigo"
 import {type Match} from "navigo"
 import {Category} from "./pages/Category.ts"
 import {ProductDetailPage} from "./pages/ProductDetailPage.ts"
-import {CategoriesPage} from "./pages/CategoriesPage.ts"
+import {CategoriesPage} from "./pages/categoriesPage/CategoriesPage.ts"
 import {CartPage} from "./pages/CartPage.ts";
 import {CheckoutPage} from "./pages/CheckoutPage.ts";
 import {Footer} from "./components/footer/Footer.ts";

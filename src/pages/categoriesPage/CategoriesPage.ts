@@ -1,6 +1,7 @@
-import {getCategories} from "../api/productsApi.ts";
-import type {ICategory} from "../types.ts";
-import {CategoryCard} from "../components/categoryCard/CategoryCard.ts";
+import {getCategories} from "../../api/productsApi.ts";
+import type {ICategory} from "../../types.ts";
+import {CategoryCard} from "../../components/categoryCard/CategoryCard.ts";
+import './CategoriesPage.sass'
 
 export function CategoriesPage() {
 
