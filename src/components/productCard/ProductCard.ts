@@ -9,7 +9,7 @@ export function ProductCard(product: IProduct) {
         <div class="thumbnail-container">
             <img src="${product.thumbnail}" alt="Image of ${product.title}">
         </div>
-        <h4 class="title">${product.title}</h4>
+        <h4 class="product-card__title">${product.title}</h4>
         <div class="rating">
             <span class="rating__stars"></span>
             <span class="rating__value">${product.rating}<span class="rating__max-rating">/5</span></span>
@@ -33,7 +33,7 @@ export function ProductCard(product: IProduct) {
         discount.innerHTML = `
 <div class="discount">
     <div class="old-price">$${oldPrice}</div>
-    <div class="discount-percentage">${discountPercentage}</div>
+    <div class="discount-percentage">-${discountPercentage}%</div>
 </div>
 `;
         price.appendChild(discount.content);

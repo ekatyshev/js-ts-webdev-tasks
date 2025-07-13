@@ -21,11 +21,16 @@ export function Category(param: string) {
     }
 
     main.innerHTML = `
-<article>
-    <aside></aside>
-    <h1>${name}</h1>
-</article>
+<div class="category__wrapper content-max-width">
+  <aside class="filters-panel__wrapper"></aside>
+  <article class="category">
+      <h1 class="category__title">${name}</h1>
+      <div class="category__product-list"></div>
+  </ul>
+</div>
 `;
+
+    const productList = main.querySelector(".category__product-list");
 
     getProductsByCategory(slug).then(({ products }: any) => {
       products.forEach((product: IProduct) => {
@@ -33,10 +38,12 @@ export function Category(param: string) {
         if (!brands.includes(product.brand)) {
           brands.push(product.brand);
         }
-        main.append(productElement);
+        if(productList) {
+          productList.append(productElement);
+        }
       });
 
-      const aside = main.querySelector("aside");
+      const aside = main.querySelector(".filters-panel__wrapper");
       aside?.append(Filters(brands));
     });
   });
