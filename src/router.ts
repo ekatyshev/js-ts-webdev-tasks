@@ -1,7 +1,7 @@
 import Navigo from "navigo";
 import { type Match } from "navigo";
 import { Category } from "./pages/category/Category.ts";
-import { ProductDetailPage } from "./pages/ProductDetailPage.ts";
+import { ProductDetailsPage } from "./pages/productDetailsPage/ProductDetailsPage.ts";
 import { CategoriesPage } from "./pages/categoriesPage/CategoriesPage.ts";
 import { CartPage } from "./pages/CartPage.ts";
 import { CheckoutPage } from "./pages/CheckoutPage.ts";
@@ -44,7 +44,7 @@ router.on({
     if (data) {
       productId = data.productId;
     }
-    return handleRouteChange(ProductDetailPage, productId);
+    return handleRouteChange(ProductDetailsPage, productId);
   },
   "/cart": () => {
     return handleRouteChange(CartPage);

@@ -1,8 +1,9 @@
-import { getProductById } from "../api/productsApi.ts";
-import { type IProduct } from "../types.ts";
-import { Cart } from "../components/Cart.ts";
+import { getProductById } from "../../api/productsApi.ts";
+import { type IProduct } from "../../types.ts";
+import { Cart } from "../../components/Cart.ts";
+import "ProductDetailsPage.sass"
 
-export function ProductDetailPage(param: string, cart: Cart) {
+export function ProductDetailsPage(param: string, cart: Cart) {
   const main = document.createElement("main");
   main.classList.add("main");
 
