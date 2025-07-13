@@ -13,6 +13,7 @@ export interface IProduct {
   discountPercentage: number;
   rating: number;
   thumbnail: string;
+  images: string[];
 }
 
 export interface NavPanelConfigItem {
