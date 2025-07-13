@@ -39,9 +39,10 @@ export function Filters(existingBrands?: string[]): HTMLElement {
 
 `;
 
+  const brandGroup = filters.querySelector(".filter-group_brand");
   const brandList = filters.querySelector(".filter-group_brand ul");
 
-  if (existingBrands && brandList) {
+  if (existingBrands && existingBrands.length > 1 && brandList) {
     existingBrands.forEach((brand) => {
       const brandItem = document.createElement("li");
       brandItem.innerHTML = `
@@ -50,6 +51,8 @@ export function Filters(existingBrands?: string[]): HTMLElement {
             `;
       brandList.append(brandItem);
     });
+  } else if (brandGroup) {
+    brandGroup.remove();
   }
 
   return filters;
