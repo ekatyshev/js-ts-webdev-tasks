@@ -21,6 +21,6 @@ export interface NavPanelConfigItem {
 }
 
 export interface CartItem {
-    id: number;
+    id: string;
     quantity: number;
 }

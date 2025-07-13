@@ -1,4 +1,5 @@
-import {type CartItem} from "../types.ts";
+import {type CartItem, type IProduct} from "../types.ts";
+import {getProductById} from "../api/productsApi.ts";
 
 export class Cart {
     private items: CartItem[];
@@ -15,29 +16,40 @@ export class Cart {
         this.total = 0;
     }
 
-    addToCart(id: number, quantity: number): void {
+    recalculateCart() {
+        this.subtotal = 0;
+        this.discount = 0;
+        this.discountPercentage = 0;
+        this.total = 0;
+        this.items.forEach(item => {
+            getProductById(item.id).then((product: IProduct)=>{
+                this.total += product.price
+            })
+        })
+    }
+
+    addToCart(id: string, quantity: number): void {
         const cartItem = {
             id: id,
             quantity: quantity,
         }
 
         this.items.push(cartItem);
-        recalculateCart();
+
+        this.recalculateCart();
     }
 
-    getCart(): void {
-        return {
-            items: this.items,
-            subtotal: this.subtotal,
-            discount: this.discount,
-            discountPercentage: this.discountPercentage,
-            total: this.total,
+    removeFromCart(id: string): void {
+        const index = this.items.findIndex(item => item.id === id);
+
+        if (index !== -1) {
+            this.items.splice(index, 1);
         }
+
+        this.recalculateCart()
     }
 
-    recalculateCart() {
-
+    getCart(): Cart {
+        return this
     }
 }
-
-const cart = new Cart()

@@ -5,7 +5,7 @@ import './ProductCard.sass';
 export function ProductCard(product: IProduct) {
     const template = document.createElement('template');
     template.innerHTML = `
-    <div>
+    <div class="product-card">
         <div class="thumbnail-container">
             <img src="${product.thumbnail}" alt="Image of ${product.title}">
         </div>
@@ -39,14 +39,11 @@ export function ProductCard(product: IProduct) {
         }
     }
 
-    const detailsButton = document.createElement('button');
-    detailsButton.innerText = 'See Details'
-    detailsButton.addEventListener('click', () => {
-        router.navigate(`/product/${product.id}`)
-    })
-
-    if (template.content.firstElementChild) {
-        template.content.firstElementChild.append(detailsButton)
+    const productCard = template.content.firstElementChild
+    if(productCard) {
+        productCard.addEventListener('click', () => {
+            router.navigate(`/product/${product.id}`)
+        })
     }
 
     return template.content.firstElementChild as HTMLElement;

@@ -7,16 +7,18 @@ import {CartPage} from "./pages/CartPage.ts";
 import {CheckoutPage} from "./pages/CheckoutPage.ts";
 import {Footer} from "./components/footer/Footer.ts";
 import {Header} from "./components/header/Header.ts";
+import {Cart} from "./components/Cart.ts";
 
+const cart = new Cart()
 const router = new Navigo('/');
 
-function handleRouteChange(renderPage: (param?: string) => HTMLElement, param?: string): void {
+function handleRouteChange(renderPage: (param?: string, cart?: Cart) => HTMLElement, param?: string): void {
     const app = document.getElementById("app");
     if (app) {
         app.innerHTML = ''
         app.append(Header())
         // app.append(NavPanel())
-        const page = renderPage(param)
+        const page = renderPage(param, cart)
         app.append(page)
         app.append(Footer())
     }

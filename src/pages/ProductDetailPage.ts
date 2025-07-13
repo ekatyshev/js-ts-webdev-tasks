@@ -1,12 +1,14 @@
 import {getProductById} from "../api/productsApi.ts";
 import {type IProduct} from "../types.ts";
+import {Cart} from "../components/Cart.ts";
 
-export function ProductDetailPage(param: string) {
+export function ProductDetailPage(param: string, cart: Cart) {
 
     const main = document.createElement('main');
     main.classList.add('main');
 
     const id = param
+    let piecesToBuy: number = 1
 
     getProductById(id).then((product: IProduct) => {
         const template = document.createElement('template');
@@ -48,12 +50,8 @@ export function ProductDetailPage(param: string) {
         const addToCartButton = document.createElement('button');
         addToCartButton.innerText = 'Add to Cart'
         addToCartButton.addEventListener('click', () => {
-            addToCartButton();
+            cart.addToCart(id, piecesToBuy);
         })
-
-        if (template.content.firstElementChild) {
-            template.content.firstElementChild.append(detailsButton)
-        }
 
         main.append(template.content.firstElementChild)
     })
