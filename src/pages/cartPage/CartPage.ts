@@ -1,6 +1,7 @@
-import { Cart } from "../components/Cart.ts";
-import { ProductCard } from "../components/productCard/ProductCard.ts";
-import { getProductById } from "../api/productsApi.ts";
+import { Cart } from "../../components/Cart.ts";
+import { ProductCard } from "../../components/productCard/ProductCard.ts";
+import { getProductById } from "../../api/productsApi.ts";
+import './CartPage.sass'
 
 export function CartPage(param: string, cart: Cart) {
   // // TODO Delete. Mock cart

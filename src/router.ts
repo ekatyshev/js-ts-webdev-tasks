@@ -3,7 +3,7 @@ import { type Match } from "navigo";
 import { Category } from "./pages/category/Category.ts";
 import { ProductDetailsPage } from "./pages/productDetailsPage/ProductDetailsPage.ts";
 import { CategoriesPage } from "./pages/categoriesPage/CategoriesPage.ts";
-import { CartPage } from "./pages/CartPage.ts";
+import { CartPage } from "./pages/cartPage/CartPage.ts";
 import { CheckoutPage } from "./pages/CheckoutPage.ts";
 import { Footer } from "./components/footer/Footer.ts";
 import { Header } from "./components/header/Header.ts";
