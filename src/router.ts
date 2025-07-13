@@ -1,6 +1,6 @@
 import Navigo from "navigo"
 import {type Match} from "navigo"
-import {Category} from "./pages/Category.ts"
+import {Category} from "./pages/category/Category.ts"
 import {ProductDetailPage} from "./pages/ProductDetailPage.ts"
 import {CategoriesPage} from "./pages/categoriesPage/CategoriesPage.ts"
 import {CartPage} from "./pages/CartPage.ts";

@@ -1,7 +1,8 @@
-import {getProductsByCategory} from "../api/productsApi.ts";
-import {ProductCard} from "../components/productCard/ProductCard.ts";
-import {Filters} from "../components/filters/Filters.ts";
-import {type IProduct} from "../types.ts";
+import {getProductsByCategory} from "../../api/productsApi.ts";
+import {ProductCard} from "../../components/productCard/ProductCard.ts";
+import {Filters} from "../../components/filters/Filters.ts";
+import {type IProduct} from "../../types.ts";
+import './Category.sass'
 
 export function Category(param: string) {
 
