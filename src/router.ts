@@ -19,6 +19,7 @@ function handleRouteChange(renderPage: (param?: string, cart?: Cart) => HTMLElem
         app.append(Header())
         // app.append(NavPanel())
         const page = renderPage(param, cart)
+        console.log(cart.getItems());
         app.append(page)
         app.append(Footer())
     }

@@ -16,27 +16,55 @@ export class Cart {
         this.total = 0;
     }
 
+    getItems() {
+        return this.items
+    }
+
+    getSubtotal() {
+        return this.subtotal
+    }
+
+    getDiscount() {
+        return this.discount
+    }
+
+    getDiscountPercentage() {
+        return this.discountPercentage
+    }
+
+    getTotal() {
+        return this.total
+    }
+
     recalculateCart() {
         this.subtotal = 0;
         this.discount = 0;
         this.discountPercentage = 0;
         this.total = 0;
         this.items.forEach(item => {
-            getProductById(item.id).then((product: IProduct)=>{
+            getProductById(item.id).then((product: IProduct) => {
                 this.total += product.price
             })
         })
     }
 
     addToCart(id: string, quantity: number): void {
-        const cartItem = {
-            id: id,
-            quantity: quantity,
+
+        const index = this.items.findIndex(item => item.id === id);
+
+        if (index !== -1) {
+            this.items[index].quantity += quantity;
+        } else {
+            const cartItem = {
+                id: id,
+                quantity: quantity,
+            }
+
+            this.items.push(cartItem);
         }
 
-        this.items.push(cartItem);
-
         this.recalculateCart();
+        console.log(this.items);
     }
 
     removeFromCart(id: string): void {
@@ -47,9 +75,5 @@ export class Cart {
         }
 
         this.recalculateCart()
-    }
-
-    getCart(): Cart {
-        return this
     }
 }
