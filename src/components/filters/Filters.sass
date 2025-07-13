@@ -8,6 +8,18 @@
 .filters-panel h4
   font-size: 20px
   margin-bottom: 24px
+  font-weight: bold
+  position: relative
+
+.filters-panel h4::after
+  content: ''
+  width: 24px
+  height: 24px
+  display: block
+  position: absolute
+  top: -3px
+  right: 0
+  background-image: url("../../assets/img/icon-filters.svg")
 
 .filter-group
   border-top: 1px solid rgba(0,0,0,0.1)
@@ -16,8 +28,21 @@
 
 .filter-group h5
   font-size: 20px
+  font-weight: bold
+  margin-bottom: 20px
+
+.price-inputs
+  display: flex
+  width: 100%
+  column-gap: 20px
+
+.price-inputs input
+  width: 100%
+  flex-grow: 1
 
 .filter-buttons
+  border-top: 1px solid rgba(0,0,0,0.1)
+  padding-top: 24px
   display: flex
   flex-direction: column
   row-gap: 24px
@@ -36,3 +61,4 @@
 .reset-filter
   color: #000
   background-color: #F2F0F1
+  border: none

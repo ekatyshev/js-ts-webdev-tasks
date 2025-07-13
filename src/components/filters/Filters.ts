@@ -26,8 +26,10 @@ export function Filters(existingBrands?: string[]): HTMLElement {
     </div>
     <div class="filter-group filter-group_price">
         <h5>Price</h5>
-        <input type="number" value="10" placeholder="10" name="min-price">
-        <input type="number" value="2000" placeholder="2000" name="max-price">
+        <div class="price-inputs">
+          <input type="number" value="10" placeholder="10" name="min-price">
+          <input type="number" value="2000" placeholder="2000" name="max-price">
+        </div>
     </div>
     <div class="filter-buttons">
         <button class="apply-filter">Apply Filter</button>
