@@ -1,7 +1,6 @@
 import { getCategories, getProductsByCategory } from "../../api/productsApi.ts";
-import { ProductCard } from "../../components/productCard/ProductCard.ts";
-import { Filters } from "../../components/filters/Filters.ts";
-import { type ICategory, type IProduct } from "../../types.ts";
+import { Filters, filterProducts } from "../../components/filters/Filters.ts";
+import { type IProduct } from "../../types.ts";
 import "./Category.sass";
 
 export function Category(param: string) {
@@ -33,18 +32,24 @@ export function Category(param: string) {
     const productList = main.querySelector(".category__product-list");
 
     getProductsByCategory(slug).then(({ products }: any) => {
+      const productsArray: IProduct[] = [];
       products.forEach((product: IProduct) => {
-        const productElement = ProductCard(product);
+        productsArray.push(product);
+        // const productElement = ProductCard(product);
         if (!brands.includes(product.brand)) {
           brands.push(product.brand);
         }
-        if(productList) {
-          productList.append(productElement);
-        }
+        // if (productList) {
+        //   productList.append(productElement);
+        // }
       });
 
       const aside = main.querySelector(".filters-panel__wrapper");
-      aside?.append(Filters(brands));
+
+      if (productList) {
+        aside?.append(Filters(productList, productsArray, brands));
+        filterProducts(productList, productsArray, "descending", brands);
+      }
     });
   });
 
