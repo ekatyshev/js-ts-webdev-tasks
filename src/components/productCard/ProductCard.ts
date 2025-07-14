@@ -29,7 +29,7 @@ export function ProductCard(product: IProduct) {
     `;
 
   if (template.content.firstElementChild) {
-    if (product.discountPercentage) {
+    if (product.discountPercentage > 5) {
       const price = template.content.firstElementChild.querySelector(".price");
 
       if (price) {

@@ -17,7 +17,7 @@ export function ProductDetailsPage(param: string, cart: Cart) {
 
     const allThumbnails = document.querySelectorAll(".gallery__thumbnail");
     if (allThumbnails[0]) {
-      console.log('thumbnails');
+      console.log("thumbnails");
       console.log(allThumbnails);
       allThumbnails.forEach((item) => {
         item.classList.remove("gallery__thumbnail_selected");
@@ -47,7 +47,7 @@ export function ProductDetailsPage(param: string, cart: Cart) {
             <div class="description__section description__section_main">
               <h4 class="title">${product.title}</h4>
               <div class="rating">
-                  <span class="rating__stars" style="width: ${Math.floor(product.rating) * (24 + 7) + (24 * (product.rating % 1))}px">
+                  <span class="rating__stars" style="width: ${Math.floor(product.rating) * (24 + 7) + 24 * (product.rating % 1)}px">
                       <div class="rating__all-stars">
                           <span class="rating__star"></span>
                           <span class="rating__star"></span>
@@ -63,7 +63,7 @@ export function ProductDetailsPage(param: string, cart: Cart) {
               </div>
               <div class="description">${product.description}</div>
           </div>
-          ${product.brand ? '<div class="description__section description__section_brand"><h6>Brand</h6><p>' + product.brand + '</p></div>' : ''}
+          ${product.brand ? '<div class="description__section description__section_brand"><h6>Brand</h6><p>' + product.brand + "</p></div>" : ""}
           <div class="description__section description__section_stock"><h6>In Stock</h6><p>${product.stock} items</p></div>
           <div class="adding-to-cart"></div>
         </div>
@@ -78,17 +78,19 @@ export function ProductDetailsPage(param: string, cart: Cart) {
 
         if (price) {
           const discountPercentage = Math.floor(product.discountPercentage);
-          const oldPrice = Number(
-            (product.price * (1 + discountPercentage / 100)).toFixed(2),
-          );
-          const discount = document.createElement("template");
-          discount.innerHTML = `
+          if (discountPercentage > 5) {
+            const oldPrice = Number(
+              (product.price * (1 + discountPercentage / 100)).toFixed(2),
+            );
+            const discount = document.createElement("template");
+            discount.innerHTML = `
 <div class="discount">
     <div class="old-price">$${oldPrice}</div>
-    <div class="discount-percentage">${discountPercentage}</div>
+    <div class="discount-percentage">-${discountPercentage}%</div>
 </div>
 `;
-          price.appendChild(discount.content.firstElementChild);
+            price.appendChild(discount.content.firstElementChild);
+          }
         }
       }
 
@@ -99,12 +101,12 @@ export function ProductDetailsPage(param: string, cart: Cart) {
           ".gallery__thumbnails",
         );
 
-        for(let i = 0; i < 3; i++) {
-          if(product.images[i]) {
+        for (let i = 0; i < 3; i++) {
+          if (product.images[i]) {
             const thumbnail = document.createElement("img");
             thumbnail.src = product.images[i];
             thumbnail.classList.add("gallery__thumbnail");
-            if(i === 0) {
+            if (i === 0) {
               thumbnail.classList.add("gallery__thumbnail_selected");
             }
             thumbnail.addEventListener("click", () => {
@@ -129,13 +131,13 @@ export function ProductDetailsPage(param: string, cart: Cart) {
     });
 
     if (template.content.firstElementChild) {
-      const addingToCart = template.content.firstElementChild.querySelector(".adding-to-cart");
+      const addingToCart =
+        template.content.firstElementChild.querySelector(".adding-to-cart");
       if (addingToCart) {
         addingToCart.appendChild(addToCartButton);
       }
       main.append(template.content.firstElementChild);
     }
-
   });
 
   return main;
